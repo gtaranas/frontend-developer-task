@@ -10,6 +10,7 @@ You have just joined the team. A teammate left a partially done `UserProfile` co
 
 1. **Complete the user profile layout** using the data from this API:
    - `https://reqres.in/api/users/2`
+   and this mockup: ![User Profile Mockup](./mockup/profile_mockup_mobile.png).
 2. **Implement loading and error states** (basic version is already started).
 3. **Fix a responsiveness issue** so the layout works well on mobile and desktop.
 4. **Enhance the UI** with any details you think are useful (e.g. registration date, alerts, formatting).
