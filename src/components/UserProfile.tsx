@@ -11,27 +11,14 @@ type User = {
 
 const UserProfile: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string>("");
 
   useEffect(() => {
     axios.get("https://reqres.in/api/users/2")
       .then(response => {
         setUser(response.data.data);
-        setLoading(false);
       })
-      .catch(() => {
-        setError("Failed to load user data.");
-        setLoading(false);
-      });
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
-
-  // TODO: Format and display registration date
-  // TODO: Show warning if no avatar
-  // TODO: Make layout mobile responsive
 
   return (
     <div style={{
